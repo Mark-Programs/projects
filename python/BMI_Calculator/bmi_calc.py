@@ -14,6 +14,7 @@ BMI ZONES:
 '''
 
 def find_standard():
+    '''Determine the standard of measurement'''
     while True:
         try:
             response = input("\nWhich standard are you using?\n\t1. Imperial\n\t2. Metric\n Please make your selection >> ")
@@ -28,6 +29,7 @@ def find_standard():
             continue
 
 def bmi_zone(bmi):
+    '''Calculate the BMI Zone'''
     if bmi < 18.5:
         return "Underweight"
     elif bmi < 25:
@@ -38,6 +40,7 @@ def bmi_zone(bmi):
         return "Obese"
 
 def bmi():
+    '''User input and calculate BMI'''
     calc = find_standard()
     if calc:
         height_type = 'inches'

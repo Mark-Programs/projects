@@ -2,7 +2,8 @@ import random
 
 char = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@$%^&*()_ [];:<>?"
 
-def get_pw(n):
+def get_pw(n) -> int:
+    '''Password length based on variable 'n' '''
     res = ""
     for i in range(0, n):
         res = res + random.choice(char)

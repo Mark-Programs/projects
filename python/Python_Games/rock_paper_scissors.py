@@ -1,11 +1,13 @@
 import random
 
 def comp_select():
+    ''' Generate random number for computer's play '''
     # randomly choose a item out of the list
     x = random.choice(plays)
     return plays.index(x)
 
 def keep_playing():
+    ''' Menu called to determine to keep playing the game '''
     while True:
         usr = input("\n\tWould you like to play again?\n\t1. Yes\n\t2. No\n\t >> ")
         res = 0
@@ -17,7 +19,8 @@ def keep_playing():
     return True if res == 1 else False
 
 
-def who_won(usr, comp):
+def who_won(usr, comp) -> int:
+    ''' Take usr and comp ints to determine winner '''
     # 0 = rock, 1 = paper, 2 = scissors
     # returns usr_wins: True/False
     if usr == 0:

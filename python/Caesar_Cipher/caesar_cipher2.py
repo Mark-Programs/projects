@@ -5,6 +5,7 @@ letters = 'abcdefghijklmnopqrstuvwxyz'
 special = '`~!@#$%^&*()_+-=[]}{;:",<.> /?\\|' + "'0123456789"
 
 def prog_start():
+    '''Start of program menu selection'''
     while True:
         choice = input('''
             Welcome to the Caesar Cipher Program
@@ -44,6 +45,7 @@ def prog_start():
     
 
 def cipher(message, shift, mode):
+    '''Encrypt/Decrypt message'''
     res = ''
     for letter in message.lower():
         if letter in letters:
@@ -85,6 +87,7 @@ def cipher(message, shift, mode):
 
 # use for interface requesting program restart (do another)
 def replay():
+    '''Menu selection to repeat program'''
     while True:
         choice = input('''
                 |  What do you wish to do?      |

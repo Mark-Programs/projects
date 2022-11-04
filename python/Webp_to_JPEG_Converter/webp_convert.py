@@ -2,7 +2,8 @@ from PIL import Image
 import os
 
 # function to try to create a directory
-def create_dir(name):
+def create_dir(name) -> str:
+    '''Creates a directory in the current path'''
     try:
         os.system(f'mkdir {name}')
     except:

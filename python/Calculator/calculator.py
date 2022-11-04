@@ -1,5 +1,6 @@
 
 def verify_number(e):
+    ''' User number input, pass str to print, verify float '''
     while True:
         var1 = input(f"""
             Please input the {e} number.
@@ -12,6 +13,7 @@ def verify_number(e):
             print("Please enter in only numbers")
 
 def operator_type():
+    ''' User menu to select operator type '''
     while True:
         types = ['x', '+', '-', '/', '**', '*']
         item = input('''
@@ -26,6 +28,7 @@ def operator_type():
             return item
 
 def do_math(n1, n2, operator):
+    ''' Returns actual mathematical operations'''
     match operator:
         case "x":
             return n1 * n2
@@ -41,6 +44,7 @@ def do_math(n1, n2, operator):
             return n1 ** n2    
 
 def restart():
+    ''' User menu to repeat program or exit '''
     res = input(""" 
             Would you like to use the calculator again?
                 1. Yes
@@ -52,6 +56,7 @@ def restart():
     print("\n\n")
 
 def graphic():
+    ''' ASCII graphic of calculator '''
     print('''
   _________________________
  |  _____________________  |
